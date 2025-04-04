@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import BgImage from "./assets/concert.jpg";
 
 const TicketForm = () => {
   const [formData, setFormData] = useState({
@@ -126,6 +127,7 @@ const TicketForm = () => {
 
     try {
       
+
       const response = await fetch(
         "https://tickethub-dtckb6aqe2bvewez.canadacentral-01.azurewebsites.net/api/ConcertTicket",
         {
@@ -168,7 +170,7 @@ const TicketForm = () => {
     <div
       className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 py-12 px-4 sm:px-6 lg:px-8"
       style={{
-        backgroundImage: "url('/src/assets/concert.jpg')",
+        backgroundImage: `url(${BgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
